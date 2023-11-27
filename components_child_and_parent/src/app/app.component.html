@@ -1,0 +1,12 @@
+<h1>Inputs and Outputs</h1>
+
+<app-item-detail [item]="currentItem"></app-item-detail>
+
+<app-item-details-metadata [item]="currentItem" [itemAvailability]="true"></app-item-details-metadata>
+
+<app-item-output (newItemEvent)="addItem($event)"></app-item-output>
+<h3>Parent component receiving value via &#64;Output()</h3>
+
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
