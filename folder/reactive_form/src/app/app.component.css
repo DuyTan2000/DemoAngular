@@ -10,3 +10,8 @@ p {
     max-width: 350px;
     margin: auto;
 }
+
+img {
+    max-width: 60%;
+    height: auto;
+}

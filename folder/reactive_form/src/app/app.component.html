@@ -82,3 +82,34 @@
     </div>
   </form>
 </div>
+
+<ng-container *ngFor="let img of imageUrls">
+    <ng-container *ngIf="img.id == 'class-1'">
+      <img
+        [ngSrc]="img.url"
+        width="4000"
+        height="3000"
+        [ngClass]="img.id"
+        ngSrcset="200w, 400w, 600w, 800w, 1000w, 1200w, 1600w, 2000w, 3000w"
+        priority
+      />
+      <div style="height:100px;border:1px solid;padding:10px; width: 60%;">
+        For the tutorial visit <br />
+        <br />
+        <a
+          href="https://www.angularjswiki.com/angular/use-ngoptimizedimage-to-improve-image-loading-performance-in-angular/"
+          >https://www.angularjswiki.com/angular/use-ngoptimizedimage-to-improve-image-loading-performance-in-angular/</a
+        >
+      </div>
+    </ng-container>
+    <ng-container *ngIf="img.id != 'class-1'">
+      <img
+        [ngSrc]="img.url"
+        width="4000"
+        height="3000"
+        [ngClass]="img.id"
+        ngSrcset="200w, 400w, 600w, 800w, 1000w, 1200w, 1600w, 2000w, 3000w"
+      />
+    </ng-container>
+    <p style="width: 60%;">{{ randomContent }}</p>
+  </ng-container>

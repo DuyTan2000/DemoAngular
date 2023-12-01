@@ -24,7 +24,20 @@ export class AppComponent {
   });
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) {}
+  imageUrls:imageInfo[] = [];
+
+  randomContent = "";
+
+  constructor(private formBuilder: FormBuilder) {
+    for (let i = 1; i < 7; i++) {
+      this.imageUrls.push({
+        id:"class-"+i,
+        url:i+"-"+"4000x3000_ag.jpg"
+      });
+    }
+
+    this.randomContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum";
+  }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group(
@@ -74,4 +87,9 @@ export class AppComponent {
     this.submitted = false;
     this.form.reset();
   }
+}
+
+export interface imageInfo{
+  id:string;
+  url:string;
 }
