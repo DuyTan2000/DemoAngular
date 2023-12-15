@@ -1,0 +1,27 @@
+{
+    "books": [{
+            "id": 1,
+            "name": "Hoc java free",
+            "author": "Nguyen van An",
+            "cost": 520
+        },
+        {
+            "id": 2,
+            "author": "Hoc html/css",
+            "name": "Tran Hung Dao",
+            "cost": 340
+        },
+        {
+            "id": 3,
+            "author": "Hoc C++",
+            "name": "Tap Can Binh",
+            "cost": 850
+        },
+        {
+            "id": 4,
+            "author": "Hoc javascript",
+            "name": "hhh",
+            "cost": 900
+        }
+    ]
+}
